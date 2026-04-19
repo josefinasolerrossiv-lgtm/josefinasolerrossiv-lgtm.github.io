@@ -1,0 +1,283 @@
+/* ============================================================
+   NAV.CSS — Shared Navigation Component
+   Portfolio Josefina Soler Rossi
+   ============================================================ */
+
+/* ============================================================
+   MAIN NAV
+   ============================================================ */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: background var(--transition-med), box-shadow var(--transition-med);
+}
+
+.site-nav.is-scrolled {
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+
+.nav-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.nav-logo {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1001;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-logo:hover {
+  opacity: 0.7;
+}
+
+.nav-logo span {
+  display: inline-block;
+}
+
+/* ============================================================
+   DESKTOP LINKS
+   ============================================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: width var(--transition-med);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.nav-link.is-active {
+  opacity: 1;
+}
+
+/* ============================================================
+   HAMBURGER (MOBILE)
+   ============================================================ */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 28px;
+  padding: 4px 0;
+  position: relative;
+  z-index: 1001;
+  background: none;
+  border: none;
+}
+
+.nav-hamburger span {
+  display: block;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-hamburger span:last-child {
+  width: 70%;
+  margin-left: auto;
+}
+
+/* Open state */
+.nav-hamburger.is-open span:first-child {
+  transform: rotate(45deg) translate(4.5px, 4.5px);
+}
+
+.nav-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.is-open span:last-child {
+  width: 100%;
+  transform: rotate(-45deg) translate(4.5px, -4.5px);
+}
+
+/* ============================================================
+   MOBILE MENU OVERLAY
+   ============================================================ */
+.nav-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.nav-mobile-overlay.is-open {
+  transform: translateY(0);
+}
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.nav-mobile-link {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, color 0.2s ease;
+}
+
+.nav-mobile-overlay.is-open .nav-mobile-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-mobile-overlay.is-open .nav-mobile-link:nth-child(1) { transition-delay: 0.15s; }
+.nav-mobile-overlay.is-open .nav-mobile-link:nth-child(2) { transition-delay: 0.2s; }
+.nav-mobile-overlay.is-open .nav-mobile-link:nth-child(3) { transition-delay: 0.25s; }
+.nav-mobile-overlay.is-open .nav-mobile-link:nth-child(4) { transition-delay: 0.3s; }
+.nav-mobile-overlay.is-open .nav-mobile-link:nth-child(5) { transition-delay: 0.35s; }
+
+.nav-mobile-link:hover {
+  opacity: 0.6;
+}
+
+/* Contact in mobile menu */
+.nav-mobile-contact {
+  position: absolute;
+  bottom: 2.5rem;
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-mobile-overlay {
+    display: none;
+  }
+}
+
+/* ============================================================
+   NAV COLOR THEMES (per page)
+   ============================================================ */
+
+/* Home — light transparent */
+.nav--home {
+  background: transparent;
+  color: var(--white);
+}
+
+.nav--home.is-scrolled {
+  background: rgba(8, 8, 12, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav--home .scroll-progress {
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+}
+
+/* University — blue */
+.nav--university {
+  background: rgba(0, 61, 143, 0.95);
+  color: var(--white);
+  backdrop-filter: blur(12px);
+}
+
+.nav--university .scroll-progress {
+  background: var(--uni-accent);
+}
+
+/* Haartheater — dark */
+.nav--haartheater {
+  background: rgba(10, 10, 10, 0.95);
+  color: var(--haar-cream);
+  backdrop-filter: blur(12px);
+}
+
+.nav--haartheater .scroll-progress {
+  background: linear-gradient(90deg, var(--haar-rose), var(--haar-gold));
+}
+
+/* EHCO — terracotta */
+.nav--ehco {
+  background: rgba(61, 43, 31, 0.95);
+  color: var(--ehco-warm);
+  backdrop-filter: blur(12px);
+}
+
+.nav--ehco .scroll-progress {
+  background: linear-gradient(90deg, var(--ehco-terra), var(--ehco-sun));
+}
+
+/* Toni&Guy — black */
+.nav--toniandguy {
+  background: rgba(0, 0, 0, 0.95);
+  color: var(--white);
+  backdrop-filter: blur(12px);
+}
+
+.nav--toniandguy .scroll-progress {
+  background: var(--tg-red);
+}

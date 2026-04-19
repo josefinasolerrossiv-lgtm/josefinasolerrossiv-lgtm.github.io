@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Josefina Soler Rossi — Communication & Media Graduate, Social Media Strategist, Digital Storyteller. Portfolio of marketing and communications work." />
+  <title>Josefina Soler Rossi — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&family=Montserrat:wght@400;700;900&family=Nunito:wght@400;600;700&family=Lato:wght@300;400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+</head>
+<body class="page-home">
+
+  <!-- Custom Cursor -->
+  <div class="cursor" style="background:#fff;"></div>
+  <div class="cursor-follower" style="border-color:rgba(255,255,255,0.5);"></div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" style="background:linear-gradient(135deg,#0d0a06,#1a1208,#0d1a18);"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" style="background:linear-gradient(90deg,#f5c850,#20b2aa);"></div>
+
+  <!-- Navigation -->
+  <nav class="site-nav nav--home" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Josefina Soler Rossi — Home">
+        <span>JSR</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="pages/university.html" class="nav-link">University</a></li>
+        <li><a href="pages/haartheater.html" class="nav-link">Haartheater</a></li>
+        <li><a href="pages/ehco.html" class="nav-link">EHCO</a></li>
+        <li><a href="pages/toniandguy.html" class="nav-link">Toni&amp;Guy</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-mobile-overlay" id="mobile-menu" style="background:rgba(8,8,12,0.98);">
+    <ul class="nav-mobile-links" role="list">
+      <li><a href="index.html" class="nav-mobile-link" style="color:#fff;">Home</a></li>
+      <li><a href="pages/university.html" class="nav-mobile-link" style="color:#fff;">University</a></li>
+      <li><a href="pages/haartheater.html" class="nav-mobile-link" style="color:#fff;">Haartheater</a></li>
+      <li><a href="pages/ehco.html" class="nav-mobile-link" style="color:#fff;">EHCO</a></li>
+      <li><a href="pages/toniandguy.html" class="nav-mobile-link" style="color:#fff;">Toni&amp;Guy</a></li>
+    </ul>
+    <p class="nav-mobile-contact" style="color:rgba(255,255,255,0.4);">josefinasolerrossiv@gmail.com</p>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero" aria-label="Hero section">
+    <canvas id="particles-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-in delay-1">Rotterdam, Netherlands</p>
+      <h1 class="hero-name fade-in delay-2">
+        Josefina<br />
+        <em>Soler Rossi</em>
+      </h1>
+      <p class="hero-tagline fade-in delay-3">
+        Communication &amp; Media Graduate
+        <span class="hero-dot" aria-hidden="true">·</span>
+        Social Media Strategist
+        <span class="hero-dot" aria-hidden="true">·</span>
+        Digital Storyteller
+      </p>
+      <div class="hero-cta fade-in delay-4">
+        <a href="#projects" class="btn btn-hero">
+          View My Work
+          <span class="arrow" aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator fade-in delay-5" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+       ============================================================ -->
+  <section class="about section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text slide-left">
+          <!-- JOSEFINA_PHOTO: replace src below with personal photo.
+               Suggested path: assets/images/josefina-soler-rossi.jpg
+               The image will display as a warm circular avatar above the about text. -->
+          <div class="about-avatar">
+            <div class="about-avatar-placeholder" aria-label="Photo of Josefina Soler Rossi" role="img">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <!-- Uncomment once photo is ready:
+            <img src="assets/images/josefina-soler-rossi.jpg" alt="Josefina Soler Rossi — Communication & Media professional" class="about-avatar-img" />
+            -->
+          </div>
+          <span class="section-label" style="color:var(--gray-400);">About</span>
+          <h2 id="about-heading" class="about-heading">
+            Crafting stories that<br /><em>move audiences</em>
+          </h2>
+          <p class="about-bio">
+            Resourceful Communication and Media graduate with expertise in social media campaigns, content creation, and audience engagement strategies. Based in Rotterdam, with international experience across luxury, beauty, and cultural sectors.
+          </p>
+          <div class="about-skills" data-stagger="0.07">
+            <span class="skill-tag">Social Media Strategy</span>
+            <span class="skill-tag">Content Creation</span>
+            <span class="skill-tag">CapCut Pro</span>
+            <span class="skill-tag">Canva</span>
+            <span class="skill-tag">Instagram Analytics</span>
+            <span class="skill-tag">Copywriting</span>
+            <span class="skill-tag">Excel Analytics</span>
+            <span class="skill-tag">Community Management</span>
+          </div>
+        </div>
+        <div class="about-stats slide-right">
+          <div class="stat-card scale-up delay-1">
+            <span class="stat-number" data-count="true" data-target="3" data-suffix="+" data-duration="1500">3+</span>
+            <span class="stat-label">Years of Experience</span>
+          </div>
+          <div class="stat-card scale-up delay-2">
+            <span class="stat-number" data-count="true" data-target="4" data-suffix="" data-duration="1500">4</span>
+            <span class="stat-label">Brands Managed</span>
+          </div>
+          <div class="stat-card scale-up delay-3">
+            <span class="stat-number" data-count="true" data-target="40" data-suffix="%" data-duration="1800">40%</span>
+            <span class="stat-label">Avg. Follower Growth</span>
+          </div>
+          <div class="stat-card scale-up delay-4">
+            <span class="stat-number" data-count="true" data-target="5" data-suffix="" data-duration="1500">5</span>
+            <span class="stat-label">Salons Under Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS GRID
+       ============================================================ -->
+  <section class="projects section" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="projects-header slide-up">
+        <span class="section-label" style="color:var(--gray-400);">Work</span>
+        <h2 id="projects-heading" class="projects-title">Selected Projects</h2>
+        <p class="projects-subtitle">Four chapters of growth, strategy, and creative impact</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Card 1 — University -->
+        <article class="project-card card--university fade-in delay-1" data-cursor-hover>
+          <a href="pages/university.html" class="card-link" aria-label="View Erasmus University Rotterdam project">
+            <div class="card-bg" aria-hidden="true"></div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-label">2022 — 2025</span>
+                <span class="card-category">Education</span>
+              </div>
+              <h3 class="card-title">Erasmus<br />Universiteit<br />Rotterdam</h3>
+              <p class="card-role">Communication &amp; Media · Bachelor</p>
+            </div>
+            <div class="card-hover-overlay">
+              <p class="card-description">International Bachelor in Communication and Media with a Minor in Influencing People. The academic foundation behind every strategic decision.</p>
+              <span class="card-cta">Explore <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+            <div class="card-accent" aria-hidden="true"></div>
+          </a>
+        </article>
+
+        <!-- Card 2 — Haartheater -->
+        <article class="project-card card--haartheater fade-in delay-2" data-cursor-hover>
+          <a href="pages/haartheater.html" class="card-link" aria-label="View Het Haartheater project">
+            <div class="card-bg" aria-hidden="true"></div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-label">Apr — Nov 2024</span>
+                <span class="card-category">Beauty · Luxury</span>
+              </div>
+              <h3 class="card-title">Het<br />Haar&shy;theater</h3>
+              <p class="card-role">Social Media Manager Intern</p>
+            </div>
+            <div class="card-hover-overlay">
+              <p class="card-description">Transformed a luxury hair salon chain's digital presence. +40% follower growth, +50% engagement. Five Amsterdam salons unified under one cohesive strategy.</p>
+              <span class="card-cta">Explore <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+            <div class="card-accent" aria-hidden="true"></div>
+          </a>
+        </article>
+
+        <!-- Card 3 — EHCO -->
+        <article class="project-card card--ehco fade-in delay-3" data-cursor-hover>
+          <a href="pages/ehco.html" class="card-link" aria-label="View EHCO project">
+            <div class="card-bg" aria-hidden="true"></div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-label">Sep 2024 — Jun 2025</span>
+                <span class="card-category">Culture · Community</span>
+              </div>
+              <h3 class="card-title">Erasmus<br />Hispanic<br />Cultural Org.</h3>
+              <p class="card-role">Social Media Manager &amp; Content Editor</p>
+            </div>
+            <div class="card-hover-overlay">
+              <p class="card-description">Built community and cultural identity for hundreds of Hispanic students at Erasmus Rotterdam. +35% audience expansion and record event participation.</p>
+              <span class="card-cta">Explore <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+            <div class="card-accent" aria-hidden="true"></div>
+          </a>
+        </article>
+
+        <!-- Card 4 — Toni&Guy -->
+        <article class="project-card card--toniandguy fade-in delay-4" data-cursor-hover>
+          <a href="pages/toniandguy.html" class="card-link" aria-label="View Toni&amp;Guy NL project">
+            <div class="card-bg" aria-hidden="true"></div>
+            <div class="card-content">
+              <div class="card-meta">
+                <span class="card-label">Jun 2025 — Mar 2026</span>
+                <span class="card-category">Fashion · Premium</span>
+              </div>
+              <h3 class="card-title">Toni&amp;<br />Guy NL</h3>
+              <p class="card-role">Social Media &amp; Marketing Intern</p>
+            </div>
+            <div class="card-hover-overlay">
+              <p class="card-description">Multi-channel marketing strategy for the Netherlands division of a global premium hair brand. +30% digital engagement across all channels in 9 months.</p>
+              <span class="card-cta">Explore <span class="arrow" aria-hidden="true">→</span></span>
+            </div>
+            <div class="card-accent" aria-hidden="true"></div>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       APPROACH SECTION
+       ============================================================ -->
+  <section class="approach section" aria-labelledby="approach-heading">
+    <div class="container">
+      <div class="approach-inner">
+        <div class="approach-text slide-left">
+          <span class="section-label" style="color:var(--gray-400);">How I Work</span>
+          <h2 id="approach-heading" class="approach-heading">
+            Strategy meets<br /><em>aesthetic precision</em>
+          </h2>
+        </div>
+        <div class="approach-pillars" data-stagger="0.12">
+          <div class="pillar slide-up">
+            <span class="pillar-number" aria-hidden="true">01</span>
+            <h3 class="pillar-title">Research &amp; Insight</h3>
+            <p class="pillar-text">I ground every campaign in audience data and market analysis before creating a single piece of content.</p>
+          </div>
+          <div class="pillar slide-up">
+            <span class="pillar-number" aria-hidden="true">02</span>
+            <h3 class="pillar-title">Brand Storytelling</h3>
+            <p class="pillar-text">Visual and written narratives that feel coherent across every touchpoint — from Instagram to LinkedIn.</p>
+          </div>
+          <div class="pillar slide-up">
+            <span class="pillar-number" aria-hidden="true">03</span>
+            <h3 class="pillar-title">Data-Driven Iteration</h3>
+            <p class="pillar-text">I track, measure, and optimize — using Excel analytics and platform insights to continuously refine performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA / CONTACT STRIP
+       ============================================================ -->
+  <section class="contact-strip" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-inner fade-in">
+        <p class="contact-pre">Open to opportunities</p>
+        <h2 id="contact-heading" class="contact-heading">
+          Let's create something<br /><em>remarkable together</em>
+        </h2>
+        <a href="mailto:josefinasolerrossiv@gmail.com" class="btn btn-contact">
+          Get in touch
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-name">Josefina Soler Rossi</span>
+          <span class="footer-title">Communication &amp; Media · Rotterdam</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="pages/university.html" class="footer-link">University</a>
+          <a href="pages/haartheater.html" class="footer-link">Haartheater</a>
+          <a href="pages/ehco.html" class="footer-link">EHCO</a>
+          <a href="pages/toniandguy.html" class="footer-link">Toni&amp;Guy</a>
+        </nav>
+        <div class="footer-contact">
+          <a href="mailto:josefinasolerrossiv@gmail.com" class="footer-contact-link">josefinasolerrossiv@gmail.com</a>
+          <a href="https://linkedin.com/in/josefina-soler-rossi" target="_blank" rel="noopener noreferrer" class="footer-contact-link">LinkedIn ↗</a>
+          <a href="tel:+34635752411" class="footer-contact-link">+34 635 75 24 11</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Josefina Soler Rossi. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

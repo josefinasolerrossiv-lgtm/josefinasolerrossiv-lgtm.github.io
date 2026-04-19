@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/Users/josefinasoler/.npm-global/node_modules/.bin/netlify deploy:*)",
+      "Bash(sips -s format jpeg \"/Users/josefinasoler/Downloads/IMG_0556 2.HEIC\" --out \"/Users/josefinasoler/Portfolio Josefina/assets/images/tg-photo-11.jpg\")",
+      "Bash(grep -l \"image\" /Users/josefinasoler/.claude/projects/-Users-josefinasoler-Portfolio-Josefina/*.jsonl)",
+      "Bash(awk '{print length, NR}')",
+      "Bash(python3)"
+    ]
+  }
+}

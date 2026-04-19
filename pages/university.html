@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Josefina Soler Rossi — Erasmus Universiteit Rotterdam. International Bachelor in Communication and Media, 2022–2025." />
+  <title>Erasmus Universiteit Rotterdam — Josefina Soler Rossi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/nav.css" />
+  <link rel="stylesheet" href="../assets/css/university.css" />
+</head>
+<body class="page-university">
+
+  <!-- Custom Cursor -->
+  <div class="cursor" style="background:var(--uni-accent);"></div>
+  <div class="cursor-follower" style="border-color:rgba(200,169,81,0.4);"></div>
+
+  <!-- Page Transition -->
+  <div class="page-transition" style="background:var(--uni-primary);"></div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress"></div>
+
+  <!-- Navigation -->
+  <nav class="site-nav nav--university" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="Back to portfolio home">JSR</a>
+      <ul class="nav-links" role="list">
+        <li><a href="university.html" class="nav-link is-active">University</a></li>
+        <li><a href="haartheater.html" class="nav-link">Haartheater</a></li>
+        <li><a href="ehco.html" class="nav-link">EHCO</a></li>
+        <li><a href="toniandguy.html" class="nav-link">Toni&amp;Guy</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="nav-mobile-overlay" id="mobile-menu" style="background:rgba(0,31,71,0.98);">
+    <ul class="nav-mobile-links" role="list">
+      <li><a href="../index.html" class="nav-mobile-link" style="color:#fff;">Home</a></li>
+      <li><a href="university.html" class="nav-mobile-link" style="color:var(--uni-accent);">University</a></li>
+      <li><a href="haartheater.html" class="nav-mobile-link" style="color:#fff;">Haartheater</a></li>
+      <li><a href="ehco.html" class="nav-mobile-link" style="color:#fff;">EHCO</a></li>
+      <li><a href="toniandguy.html" class="nav-mobile-link" style="color:#fff;">Toni&amp;Guy</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <header class="uni-hero" aria-labelledby="uni-hero-title">
+    <!-- Campus photo background -->
+    <div class="uni-hero-photo" aria-hidden="true">
+      <img src="../assets/images/erasmus-campus.jpg" alt="Erasmus Universiteit Rotterdam campus — Woudestein" class="uni-hero-photo-img" />
+    </div>
+    <div class="uni-hero-texture" aria-hidden="true"></div>
+    <div class="uni-hero-overlay" aria-hidden="true"></div>
+    <div class="uni-hero-content">
+      <div class="uni-hero-badge fade-in delay-1">
+        <!-- UNIVERSITY_LOGO: replace src below with actual university logo image -->
+        <!-- <img src="../assets/images/university-logo.png" alt="Erasmus Universiteit Rotterdam logo" class="uni-hero-logo" /> -->
+        <span>Erasmus Universiteit Rotterdam</span>
+        <span class="badge-year">2022 — 2025</span>
+      </div>
+      <h1 id="uni-hero-title" class="uni-hero-title fade-in delay-2">
+        International<br />
+        <em>Bachelor in</em><br />
+        Communication<br />&amp; Media
+      </h1>
+      <p class="uni-hero-sub fade-in delay-3">Where strategic thinking meets creative communication</p>
+    </div>
+    <div class="uni-hero-scroll fade-in delay-4" aria-hidden="true">
+      <div class="scroll-line" style="background:linear-gradient(to bottom, transparent, rgba(200,169,81,0.6));"></div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       COUNTER STRIP
+       ============================================================ -->
+  <section class="uni-counters" aria-label="Key statistics">
+    <div class="container">
+      <div class="counters-grid">
+        <div class="counter-item fade-in delay-1">
+          <span class="counter-number" data-count="true" data-target="3" data-suffix=" Years" data-duration="1600">3 Years</span>
+          <span class="counter-label">Full Degree Programme</span>
+        </div>
+        <div class="counter-item fade-in delay-2">
+          <span class="counter-number" data-count="true" data-target="1" data-suffix=" Minor" data-duration="1200">1 Minor</span>
+          <span class="counter-label">Influencing People</span>
+        </div>
+        <div class="counter-item fade-in delay-3">
+          <span class="counter-number" data-count="true" data-target="2" data-suffix=" Internships" data-duration="1400">2 Internships</span>
+          <span class="counter-label">Professional Work Experience</span>
+        </div>
+        <div class="counter-item fade-in delay-4">
+          <span class="counter-number" data-count="true" data-target="1" data-suffix=" Thesis" data-duration="1000">1 Thesis</span>
+          <span class="counter-label">Strategic Digital Communication</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ACADEMIC JOURNEY TIMELINE
+       ============================================================ -->
+  <section class="uni-timeline section" aria-labelledby="timeline-heading">
+    <div class="container">
+      <div class="section-header slide-up">
+        <span class="section-label" style="color:var(--uni-accent);">Academic Journey</span>
+        <h2 id="timeline-heading" class="section-title uni-section-title">Three years of<br /><em>purposeful learning</em></h2>
+        <div class="section-divider" style="background:var(--uni-accent);"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <div class="timeline-item slide-right" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">September 2022</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Programme Start</h3>
+            <p class="timeline-text">Enrolled in the International Bachelor in Communication and Media at Erasmus Universiteit Rotterdam — one of Europe's leading research universities. Began building foundations in media theory, strategic communication, and digital storytelling.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item slide-left" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">April 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">First Major Internship</h3>
+            <p class="timeline-text">Launched my professional journey while still studying — joined Het Haartheater as Social Media Manager Intern, applying classroom theory to real campaigns across five luxury salons in Amsterdam.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item slide-right" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">September — November 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Minor: Influencing People</h3>
+            <p class="timeline-text">Selected the Psychology of Persuasion and Social Influence minor — a specialisation that deepened my understanding of audience behaviour, cognitive biases, and ethical persuasion techniques. Directly applicable to every campaign I've led since.</p>
+            <span class="timeline-badge">Minor · Erasmus School of Social and Behavioural Sciences</span>
+            <!-- Minor video project -->
+            <div class="timeline-video">
+              <p class="timeline-video-label">Video Project — Minor: Influencing People</p>
+              <video
+                controls
+                preload="none"
+                aria-label="Video project produced during the Minor: Influencing People at Erasmus University"
+                poster=""
+              >
+                <source src="../assets/video/minor-influencing-people.mp4" type="video/mp4" />
+                Your browser does not support the video element.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item slide-left" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">September 2024</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">EHCO — Community Role</h3>
+            <p class="timeline-text">Took on a leadership role as Social Media Manager &amp; Content Editor for Erasmus Hispanic Cultural Organization, managing community communications for hundreds of Hispanic students across the university.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item slide-right" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-date">June 2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Graduation</h3>
+            <p class="timeline-text">Completed the International Bachelor in Communication and Media with a comprehensive foundation in strategic communication, digital media, and cross-cultural storytelling. Graduated with concurrent internship experience at Toni&amp;Guy Netherlands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CORE COMPETENCIES
+       ============================================================ -->
+  <section class="uni-competencies section" aria-labelledby="competencies-heading">
+    <div class="container">
+      <div class="section-header slide-up">
+        <span class="section-label" style="color:var(--uni-accent);">Skills Developed</span>
+        <h2 id="competencies-heading" class="section-title uni-section-title">Core Competencies</h2>
+        <div class="section-divider" style="background:var(--uni-accent);"></div>
+      </div>
+
+      <!-- Competencies derived from actual courses taken -->
+      <div class="competencies-pills" data-stagger="0.07">
+        <div class="competency-pill slide-up delay-1">
+          <span class="pill-course">Social Media Marketing</span>
+          <span class="pill-label">Digital Strategy &amp; Community Management</span>
+        </div>
+        <div class="competency-pill slide-up delay-2">
+          <span class="pill-course">Qualitative &amp; Quantitative Analysis</span>
+          <span class="pill-label">Research &amp; Data Interpretation</span>
+        </div>
+        <div class="competency-pill slide-up delay-3">
+          <span class="pill-course">Transmedia Communication</span>
+          <span class="pill-label">Cross-Platform Storytelling</span>
+        </div>
+        <div class="competency-pill slide-up delay-4">
+          <span class="pill-course">Intercultural Communication</span>
+          <span class="pill-label">Global &amp; Cultural Awareness</span>
+        </div>
+        <div class="competency-pill slide-up delay-1">
+          <span class="pill-course">Consumer Behavior &amp; Marketing Action</span>
+          <span class="pill-label">Audience Insight &amp; Conversion</span>
+        </div>
+        <div class="competency-pill slide-up delay-2">
+          <span class="pill-course">Consumption and Identity</span>
+          <span class="pill-label">Brand Semiotics &amp; Cultural Marketing</span>
+        </div>
+        <div class="competency-pill slide-up delay-3">
+          <span class="pill-course">Communication Ethics &amp; Ethical Dilemmas</span>
+          <span class="pill-label">Ethical Brand Communication</span>
+        </div>
+        <div class="competency-pill slide-up delay-4">
+          <span class="pill-course">Digital Content</span>
+          <span class="pill-label">Content Creation &amp; Digital Production</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ACADEMIC PROJECTS
+       ============================================================ -->
+  <section class="uni-projects section" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header slide-up">
+        <span class="section-label" style="color:var(--uni-accent);">Academic Work</span>
+        <h2 id="projects-heading" class="section-title uni-section-title">Featured Projects</h2>
+        <div class="section-divider" style="background:var(--uni-accent);"></div>
+      </div>
+
+      <div class="uni-projects-grid" data-stagger="0.1">
+
+        <article class="uni-project-card uni-project-card--bero slide-left">
+          <div class="uni-project-number" aria-hidden="true">01</div>
+          <div class="uni-project-body">
+            <span class="uni-project-tag">Brand Strategy · Transmedia</span>
+            <h3 class="uni-project-title">Crafting Bero: A Transmedia Strategic Roadmap for Tom Holland's Brand Success</h3>
+            <p class="uni-project-desc">A strategic transmedia roadmap analyzing and proposing a cohesive brand narrative for Tom Holland's personal brand across multiple platforms — bridging entertainment, authenticity, and audience psychology.</p>
+            <div class="uni-project-actions">
+              <button class="uni-pdf-toggle" aria-expanded="false" aria-controls="bero-pdf-viewer" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true'); document.getElementById('bero-pdf-viewer').classList.toggle('is-open');">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                View Presentation
+              </button>
+              <a href="../assets/docs/bero-presentation.pdf" download="Bero-Presentation-JosefinaSolerRossi.pdf" class="uni-pdf-download" aria-label="Download Bero Presentation PDF">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+              </a>
+            </div>
+          </div>
+          <!-- Embedded PDF viewer — toggles open on button click -->
+          <div class="uni-pdf-viewer" id="bero-pdf-viewer" aria-label="Bero Presentation PDF viewer">
+            <iframe
+              src="../assets/docs/bero-presentation.pdf"
+              title="Crafting Bero: A Transmedia Strategic Roadmap — Presentation"
+              loading="lazy"
+              aria-label="Bero presentation slides"
+            ></iframe>
+          </div>
+        </article>
+
+        <article class="uni-project-card slide-up">
+          <div class="uni-project-number" aria-hidden="true">02</div>
+          <div class="uni-project-body">
+            <span class="uni-project-tag">Literature Review · AI &amp; Psychology</span>
+            <h3 class="uni-project-title">Literature Review: The Impact of ChatGPT on Users' Psychology</h3>
+            <p class="uni-project-desc">A creative academic literature review examining how ChatGPT and generative AI influence user psychology, behavior, and emotional dependency — exploring the intersection of technology, identity, and communication.</p>
+          </div>
+        </article>
+
+        <article class="uni-project-card slide-right">
+          <div class="uni-project-number" aria-hidden="true">03</div>
+          <div class="uni-project-body">
+            <span class="uni-project-tag">Brand Identity · UX · Sustainability</span>
+            <h3 class="uni-project-title">Thrift Uni — Transformative Clothing Marketplace App for Students</h3>
+            <p class="uni-project-desc">Conceptualized Thrift Uni: a student-focused second-hand clothing app addressing responsible consumption and production (aligned with UN SDG 12). Includes brand identity, UX concept, and go-to-market strategy.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED THESIS / PROJECT
+       ============================================================ -->
+  <section class="uni-thesis section" aria-labelledby="thesis-heading">
+    <div class="container--narrow">
+      <div class="thesis-card fade-in">
+        <div class="thesis-label">
+          <span>Final Thesis</span>
+          <span class="thesis-year">2025</span>
+        </div>
+        <h2 id="thesis-heading" class="thesis-title">
+          When Celebrities Clash and TikTok Talks Back: The Rhetorical Dynamics of the Blake Lively vs. Justin Baldoni Feud and Its Impact on Public Discourse
+        </h2>
+        <p class="thesis-subtitle">
+          An in-depth rhetorical analysis of a landmark celebrity conflict and its amplification through TikTok — examining how digital publics shape narrative, accountability, and the evolving dynamics of public discourse in the social media era.
+        </p>
+        <div class="thesis-meta">
+          <div class="thesis-meta-item">
+            <span class="meta-label">Programme</span>
+            <span class="meta-value">International Bachelor Communication &amp; Media</span>
+          </div>
+          <div class="thesis-meta-item">
+            <span class="meta-label">Institution</span>
+            <span class="meta-value">Erasmus Universiteit Rotterdam</span>
+          </div>
+          <div class="thesis-meta-item">
+            <span class="meta-label">Focus Area</span>
+            <span class="meta-value">Rhetoric · TikTok · Celebrity Culture · Public Discourse</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TOOLS MASTERED
+       ============================================================ -->
+  <section class="uni-tools section" aria-labelledby="tools-heading">
+    <div class="container">
+      <div class="section-header slide-up">
+        <span class="section-label" style="color:var(--uni-accent);">Technical Skills</span>
+        <h2 id="tools-heading" class="section-title uni-section-title">Key Tools Mastered</h2>
+        <div class="section-divider" style="background:var(--uni-accent);"></div>
+      </div>
+
+      <div class="tools-grid" data-stagger="0.08">
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <span class="tool-name">SPSS</span>
+          <span class="tool-level">Statistical Data Analysis</span>
+        </div>
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <span class="tool-name">Google Docs</span>
+          <span class="tool-level">Collaborative Document Creation</span>
+        </div>
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <span class="tool-name">Canvas (LMS)</span>
+          <span class="tool-level">Course Management &amp; Academic Submissions</span>
+        </div>
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          </div>
+          <span class="tool-name">CapCut Pro</span>
+          <span class="tool-level">Video Editing &amp; Content Production</span>
+        </div>
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          </div>
+          <span class="tool-name">Powtoon</span>
+          <span class="tool-level">Animated Presentation Creation</span>
+        </div>
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </div>
+          <span class="tool-name">Canva</span>
+          <span class="tool-level">Visual Design &amp; Brand Materials</span>
+        </div>
+        <div class="tool-badge scale-up">
+          <div class="tool-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <span class="tool-name">Atlas.ti 25</span>
+          <span class="tool-level">Qualitative Data Analysis &amp; Research Coding</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       QUOTE / REFLECTION
+       ============================================================ -->
+  <section class="uni-quote" aria-label="Personal reflection">
+    <div class="container--narrow">
+      <div class="quote-block fade-in">
+        <div class="quote-mark" aria-hidden="true">"</div>
+        <blockquote class="quote-text">
+          Erasmus didn't just teach me communication — it taught me how to think strategically about people. Every campaign I build starts with a question my professors taught me to ask: what does this audience actually need to feel?
+        </blockquote>
+        <cite class="quote-author">— Josefina Soler Rossi</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NEXT PROJECT LINK
+       ============================================================ -->
+  <section class="next-project" aria-label="Navigate to next project">
+    <a href="haartheater.html" class="next-project-link fade-in">
+      <span class="next-label">Next Project</span>
+      <span class="next-title">Het Haartheater →</span>
+      <span class="next-role">Social Media Manager Intern · Luxury Beauty · Amsterdam</span>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="uni-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-simple">
+        <a href="../index.html" class="footer-back">← Back to Portfolio</a>
+        <span class="footer-copy">&copy; 2026 Josefina Soler Rossi</span>
+        <a href="mailto:josefinasolerrossiv@gmail.com" class="footer-email">josefinasolerrossiv@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/animations.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

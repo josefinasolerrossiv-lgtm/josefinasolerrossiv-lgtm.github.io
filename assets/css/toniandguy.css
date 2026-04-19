@@ -1,0 +1,976 @@
+/* ============================================================
+   TONIANDGUY.CSS — Toni&Guy Netherlands
+   Palette: Black (#000) · Signal Red (#e30613) · White · Carbon Grey (#333)
+   Tone: Premium Fashion Haircare · International · Aspirational Professional
+   ============================================================ */
+
+/* ============================================================
+   LOCAL PALETTE OVERRIDE — gold accent replacing red
+   ============================================================ */
+:root {
+  --tg-gold: #c9a227;
+}
+
+/* ============================================================
+   PAGE BASE
+   ============================================================ */
+.page-toniandguy {
+  background: var(--tg-black);
+  color: var(--tg-white);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.tg-hero {
+  position: relative;
+  min-height: 100svh;
+  background: var(--tg-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+/* Grid background texture */
+.tg-hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Red accent stripe */
+.tg-hero-stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--tg-gold);
+}
+
+/* Hero content */
+.tg-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 var(--space-md);
+}
+
+.tg-hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 3rem;
+}
+
+.tg-hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.tg-title-word {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(4rem, 14vw, 12rem);
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--tg-white);
+  letter-spacing: -0.03em;
+}
+
+.tg-title-amp {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(3rem, 10vw, 9rem);
+  font-weight: 400;
+  color: var(--tg-gold);
+  line-height: 0.85;
+  margin: 0 0.05em;
+}
+
+.tg-hero-country {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 4rem;
+}
+
+/* Meta row */
+.tg-hero-meta {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.tg-meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tg-meta-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--tg-gold);
+}
+
+.tg-meta-value {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.04em;
+}
+
+.tg-meta-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+  align-self: stretch;
+}
+
+.tg-hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.tg-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--tg-gray);
+}
+
+.tg-title-red {
+  color: var(--tg-gold);
+}
+
+/* ============================================================
+   SCOPE
+   ============================================================ */
+.tg-scope {
+  background: var(--tg-white);
+  border-bottom: 4px solid var(--tg-gold);
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.scope-body {
+  color: rgba(51,51,51,0.7);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.scope-body:last-child {
+  margin-bottom: 0;
+}
+
+/* Brand visual block */
+.scope-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scope-brand-block {
+  text-align: center;
+  padding: 3rem;
+  border: 2px solid var(--tg-black);
+  position: relative;
+}
+
+.scope-brand-block::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.scope-brand-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--tg-black);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.scope-brand-line {
+  width: 40px;
+  height: 3px;
+  background: var(--tg-gold);
+  margin: 0 auto 1rem;
+}
+
+.scope-brand-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+}
+
+/* ============================================================
+   ACHIEVEMENTS
+   ============================================================ */
+.tg-achievements {
+  background: var(--tg-black);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.tg-achievements .tg-section-title {
+  color: var(--tg-white);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.achievement-card {
+  background: var(--tg-black);
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition-med);
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--tg-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-med);
+}
+
+.achievement-card:hover::before {
+  transform: scaleX(1);
+}
+
+.achievement-card:hover {
+  background: rgba(227,6,19,0.05);
+}
+
+.achievement-icon {
+  color: rgba(255,255,255,0.2);
+  margin-bottom: 1.5rem;
+  transition: color var(--transition-med);
+}
+
+.achievement-card:hover .achievement-icon {
+  color: var(--tg-gold);
+}
+
+.achievement-number {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.1em;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.ach-prefix {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--tg-gold);
+  line-height: 1.1;
+}
+
+.ach-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 900;
+  color: var(--tg-white);
+  letter-spacing: -0.02em;
+}
+
+.achievement-number--text .ach-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--tg-gold);
+  letter-spacing: -0.02em;
+}
+
+.achievement-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--tg-white);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.achievement-desc {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.4);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   CAMPAIGNS TIMELINE
+   ============================================================ */
+.tg-campaigns {
+  background: var(--tg-light-gray);
+}
+
+.tg-campaigns .tg-section-title {
+  color: var(--tg-black);
+}
+
+.timeline-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+
+/* Vertical connecting line */
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  left: 140px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--tg-gold), rgba(227,6,19,0.1));
+}
+
+.timeline-h-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-h-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-h-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-h-dot {
+  position: absolute;
+  left: 136px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--tg-gold);
+  box-shadow: 0 0 0 3px rgba(227,6,19,0.15);
+}
+
+.timeline-h-date {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tg-gold);
+  padding-top: 0.25rem;
+  line-height: 1.6;
+  align-self: start;
+}
+
+.timeline-h-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--tg-black);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-h-text {
+  font-size: var(--text-base);
+  color: rgba(0,0,0,0.55);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* ============================================================
+   SKILLS BARS
+   ============================================================ */
+.tg-skills {
+  background: var(--tg-black);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.tg-skills .tg-section-title {
+  color: var(--tg-white);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 5rem;
+  margin-top: 3rem;
+}
+
+.skill-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.skill-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--tg-white);
+}
+
+.skill-pct {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--tg-gold);
+}
+
+.skill-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-sub {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+.tg-quote {
+  background: var(--tg-black);
+}
+
+.tg-quote-inner {
+  background: var(--tg-gray);
+  padding: 6rem 0;
+  border-top: 3px solid var(--tg-gold);
+}
+
+.tg-quote-block {
+  position: relative;
+  padding: 0 0 0 2.5rem;
+}
+
+.tg-quote-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.tg-red-bar {
+  width: 3px;
+  height: 100%;
+  background: var(--tg-gold);
+}
+
+.tg-quote-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.9rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.tg-quote-author {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-xs);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ============================================================
+   BACK TO HOME
+   ============================================================ */
+.tg-back {
+  background: var(--tg-black);
+  padding: 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.tg-back-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  gap: 0.75rem;
+  transition: background var(--transition-med);
+  color: var(--tg-white);
+}
+
+.tg-back-link:hover {
+  background: rgba(227,6,19,0.06);
+}
+
+.back-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--tg-gold);
+  opacity: 0.7;
+}
+
+.back-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--tg-white);
+  transition: letter-spacing var(--transition-med);
+}
+
+.tg-back-link:hover .back-title {
+  letter-spacing: 0.02em;
+}
+
+.back-sub {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.tg-footer {
+  background: var(--tg-black);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 2rem 0;
+}
+
+/* ============================================================
+   SCROLL PROGRESS
+   ============================================================ */
+.page-toniandguy .scroll-progress {
+  background: var(--tg-gold);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1200px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .scope-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .scope-visual {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .timeline-horizontal::before {
+    left: 100px;
+  }
+
+  .timeline-h-item {
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+  }
+
+  .timeline-h-dot {
+    left: 96px;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tg-hero-meta {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tg-meta-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    align-self: auto;
+  }
+
+  .timeline-horizontal::before {
+    display: none;
+  }
+
+  .timeline-h-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 2rem 0;
+  }
+
+  .timeline-h-dot {
+    display: none;
+  }
+
+  .tg-quote-block {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tg-title-word {
+    font-size: clamp(3rem, 18vw, 6rem);
+  }
+
+  .tg-title-amp {
+    font-size: clamp(2.5rem, 14vw, 4.5rem);
+  }
+}
+
+/* ============================================================
+   LOGO PLACEHOLDER
+   ============================================================ */
+.tg-brand-logo {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tg-logo-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* ensures monochrome white on dark bg */
+  opacity: 0.85;
+  transition: opacity var(--transition-med);
+}
+
+.tg-logo-img:hover {
+  opacity: 1;
+}
+
+/* ============================================================
+   PHOTO GALLERY — 3-col desktop, 2-col tablet, 1-col mobile
+   Monochrome aesthetic: desaturated placeholders, red accent on hover
+   ============================================================ */
+.tg-gallery {
+  background: var(--tg-black);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.tg-gallery-subtitle {
+  color: rgba(255,255,255,0.4);
+  font-size: var(--text-base);
+  font-weight: 300;
+  margin-top: 0.75rem;
+  max-width: 480px;
+}
+
+.tg-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 3rem;
+  background: rgba(255,255,255,0.06); /* gap color */
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.tg-photo-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: default;
+  background: #111;
+}
+
+.tg-photo-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter var(--transition-med), transform var(--transition-med);
+}
+
+.tg-photo-item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+
+.tg-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: rgba(255,255,255,0.15);
+  transition: color var(--transition-med), background var(--transition-med);
+}
+
+.tg-photo-item:hover .tg-photo-placeholder {
+  color: rgba(227,6,19,0.5);
+  background: #181818;
+}
+
+.tg-photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--transition-med), transform var(--transition-med);
+}
+
+.tg-photo-item:hover .tg-photo-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tg-photo-caption-text {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tg-white);
+}
+
+/* ============================================================
+   VIDEO PLACEHOLDERS — monochrome card style
+   ============================================================ */
+.tg-videos {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.tg-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.tg-video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all var(--transition-med);
+}
+
+.tg-video-card:hover {
+  border-color: var(--tg-gold);
+  box-shadow: 0 0 0 1px var(--tg-gold), 0 16px 48px rgba(227,6,19,0.1);
+}
+
+.tg-video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #111;
+  overflow: hidden;
+}
+
+.tg-video-thumb iframe,
+.tg-video-thumb video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain;
+}
+
+.tg-video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  color: rgba(255,255,255,0.15);
+  transition: color var(--transition-med);
+}
+
+.tg-video-card:hover .tg-video-placeholder {
+  color: var(--tg-gold);
+}
+
+.tg-video-info {
+  padding: 1.5rem 1.75rem 2rem;
+  background: #111;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.tg-video-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--tg-white);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.tg-video-desc {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.35);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Instagram Highlights — dedicated section */
+.tg-instagram {
+  background: var(--tg-black, #0a0a0a);
+}
+
+.tg-insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.tg-insta-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tg-insta-card .instagram-media {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+  .tg-insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .tg-insta-grid {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Responsive gallery + video */
+@media (max-width: 1024px) {
+  .tg-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tg-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tg-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tg-photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,6 @@
+# Exclude local video files that are now served via Vimeo embeds
+assets/video/haartheater-video-1.mov
+assets/video/haartheater-video-2.mov
+assets/video/haartheater-video-3.mov
+assets/video/haartheater-video-4.mov
+assets/video/ehco-medcup-promo.mov
