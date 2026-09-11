@@ -364,24 +364,27 @@
 }
 
 .antox-panel--budare .antox-panel-gallery {
-  grid-template-columns: 1fr;
-  max-width: 220px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 360px;
 }
 
 .antox-panel--mokambo .antox-panel-gallery {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.antox-panel-gallery img {
+.antox-panel-gallery img,
+.antox-panel-gallery video {
   width: 100%;
   height: auto;
   display: block;
   border-radius: var(--border-radius);
   box-shadow: 0 16px 40px rgba(0,0,0,0.25);
   transition: transform var(--transition-med);
+  background: #000;
 }
 
-.antox-panel-gallery img:hover {
+.antox-panel-gallery img:hover,
+.antox-panel-gallery video:hover {
   transform: translateY(-4px);
 }
 
