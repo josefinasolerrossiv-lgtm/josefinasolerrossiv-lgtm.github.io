@@ -251,7 +251,7 @@
 
 /* Haartheater — dark */
 .nav--haartheater {
-  background: rgba(10, 10, 10, 0.95);
+  background: rgba(255, 251, 252, 0.92);
   color: var(--haar-cream);
   backdrop-filter: blur(12px);
 }
