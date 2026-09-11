@@ -257,7 +257,7 @@ function initParticles() {
 
   function drawLine(p1, p2, dist, maxDist) {
     const alpha = (1 - dist / maxDist) * 0.15;
-    ctx.strokeStyle = `rgba(230,110,95,${alpha})`;
+    ctx.strokeStyle = `rgba(255,59,92,${alpha})`;
     ctx.lineWidth = 0.5;
     ctx.beginPath();
     ctx.moveTo(p1.x, p1.y);
@@ -278,7 +278,7 @@ function initParticles() {
       // Draw dot
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(230,110,95,${p.opacity})`;
+      ctx.fillStyle = `rgba(255,59,92,${p.opacity})`;
       ctx.fill();
 
       // Connect nearby particles

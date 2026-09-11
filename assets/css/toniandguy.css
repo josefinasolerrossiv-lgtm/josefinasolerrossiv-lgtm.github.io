@@ -912,46 +912,6 @@
   font-weight: 300;
 }
 
-/* Instagram Highlights — dedicated section */
-.tg-instagram {
-  background: var(--tg-black, #0a0a0a);
-}
-
-.tg-insta-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  align-items: start;
-}
-
-.tg-insta-card {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.tg-insta-card .instagram-media {
-  margin: 0 auto !important;
-  max-width: 100% !important;
-}
-
-@media (max-width: 1024px) {
-  .tg-insta-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .tg-insta-grid {
-    grid-template-columns: 1fr;
-    max-width: 540px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 /* Responsive gallery + video */
 @media (max-width: 1024px) {
   .tg-photo-grid {
