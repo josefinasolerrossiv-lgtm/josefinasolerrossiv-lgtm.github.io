@@ -281,3 +281,14 @@
 .nav--toniandguy .scroll-progress {
   background: var(--tg-red);
 }
+
+/* LYNA — off-white, purple accent */
+.nav--lyna {
+  background: rgba(249, 249, 251, 0.92);
+  color: #26262e;
+  backdrop-filter: blur(12px);
+}
+
+.nav--lyna .scroll-progress {
+  background: linear-gradient(90deg, #4d3498, #cdfe05);
+}

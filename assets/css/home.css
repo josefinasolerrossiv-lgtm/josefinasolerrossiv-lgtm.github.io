@@ -320,7 +320,6 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: 1.5px;
   border: 1.5px solid rgba(255,255,255,0.06);
   border-radius: var(--border-radius-lg);
@@ -545,6 +544,40 @@
   color: var(--tg-red);
   border: 1px solid rgba(227,6,19,0.3);
   background: rgba(227,6,19,0.08);
+}
+
+/* ---- LYNA Card ---- */
+/* Fifth card spans full width as a closing highlight */
+.card--lyna {
+  color: var(--white);
+  grid-column: 1 / -1;
+  aspect-ratio: 21 / 9;
+  min-height: 260px;
+}
+
+.card--lyna .card-bg {
+  background: linear-gradient(135deg, #4d3498 0%, #26262e 70%);
+}
+
+.card--lyna .card-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 30%, rgba(205,254,5,0.15) 0%, transparent 55%);
+}
+
+.card--lyna .card-hover-overlay {
+  background: rgba(38,38,46,0.95);
+}
+
+.card--lyna .card-accent {
+  background: linear-gradient(90deg, #4d3498, #cdfe05);
+}
+
+.card--lyna .card-category {
+  color: #cdfe05;
+  border: 1px solid rgba(205,254,5,0.3);
+  background: rgba(205,254,5,0.08);
 }
 
 /* ============================================================

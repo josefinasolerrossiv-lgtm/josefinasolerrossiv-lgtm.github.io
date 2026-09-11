@@ -1,0 +1,785 @@
+/* ============================================================
+   LYNA.CSS — LYNA (Menstrual Cycle & Nutrition App)
+   Palette matched to lynahealth.app:
+   Deep Purple (#4D3498) · Charcoal (#26262E) · Lime (#CDFE05)
+   Lavender (#EDE9FB) · Off-White (#F9F9FB)
+   Tone: Wellness · AI Innovation · Bold, Modern, Confident
+   ============================================================ */
+
+:root {
+  --lyna-purple: #4d3498;
+  --lyna-purple-dark: #3a2673;
+  --lyna-charcoal: #26262e;
+  --lyna-lime: #cdfe05;
+  --lyna-lavender: #ede9fb;
+  --lyna-offwhite: #f9f9fb;
+}
+
+/* ============================================================
+   PAGE BASE
+   ============================================================ */
+.page-lyna {
+  background: var(--lyna-offwhite);
+  color: var(--lyna-charcoal);
+  font-family: 'Nunito', sans-serif;
+}
+
+.page-lyna h1,
+.page-lyna h2,
+.page-lyna h3,
+.page-lyna .lyna-section-title,
+.page-lyna .lyna-hero-title,
+.page-lyna .lyna-video-title,
+.page-lyna .timeline-h-title,
+.page-lyna .achievement-label,
+.page-lyna .skill-name {
+  font-family: 'Lexend', 'Nunito', sans-serif;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.lyna-hero {
+  position: relative;
+  min-height: 100svh;
+  background: var(--lyna-offwhite);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+.lyna-hero-glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(75vw, 700px);
+  height: min(75vw, 700px);
+  background: radial-gradient(circle, rgba(77,52,152,0.10) 0%, rgba(205,254,5,0.06) 45%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.lyna-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 var(--space-md);
+}
+
+.lyna-hero-eyebrow {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lyna-purple);
+  background: var(--lyna-lavender);
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  margin-bottom: 2rem;
+}
+
+.lyna-orb {
+  margin: 0 auto 1.75rem;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lyna-hero-title {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  color: var(--lyna-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.lyna-hero-title .lyna-word {
+  font-size: clamp(3.5rem, 12vw, 7.5rem);
+  display: inline-block;
+}
+
+.lyna-hero-title em {
+  font-style: normal;
+  color: var(--lyna-purple);
+}
+
+.lyna-hero-country {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(38,38,46,0.5);
+  margin-bottom: 4rem;
+}
+
+.lyna-hero-meta {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.lyna-meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lyna-meta-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lyna-purple);
+}
+
+.lyna-meta-value {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: rgba(38,38,46,0.75);
+  letter-spacing: 0.02em;
+}
+
+.lyna-meta-divider {
+  width: 1px;
+  background: rgba(38,38,46,0.12);
+  align-self: stretch;
+}
+
+.lyna-hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.lyna-section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--lyna-charcoal);
+}
+
+.lyna-title-accent {
+  color: var(--lyna-purple);
+}
+
+/* Pill-style section label, matching brand's rounded badges */
+.page-lyna .section-label {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: var(--lyna-lavender);
+  color: var(--lyna-purple) !important;
+}
+
+.page-lyna .section-divider {
+  display: none;
+}
+
+/* ============================================================
+   SCOPE
+   ============================================================ */
+.lyna-scope {
+  background: var(--lyna-offwhite);
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.scope-body {
+  color: rgba(38,38,46,0.7);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.scope-body:last-child {
+  margin-bottom: 0;
+}
+
+.scope-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lyna-brand-block {
+  text-align: center;
+  padding: 3.5rem 3rem;
+  border-radius: var(--border-radius-lg);
+  background: var(--lyna-charcoal);
+  position: relative;
+  box-shadow: 0 24px 60px rgba(38,38,46,0.18);
+}
+
+.lyna-brand-name {
+  font-family: 'Lexend', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #fff;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.lyna-brand-line {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--lyna-lime);
+  margin: 0 auto 1rem;
+}
+
+.lyna-brand-sub {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lyna-lavender);
+}
+
+/* ============================================================
+   CONTRIBUTIONS
+   ============================================================ */
+.lyna-achievements {
+  background: #fff;
+  padding: var(--space-xl) 0;
+  border-top: 1px solid rgba(38,38,46,0.06);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(38,38,46,0.06);
+  border: 1px solid rgba(38,38,46,0.06);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.achievement-card {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition-med);
+}
+
+.achievement-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--lyna-lime);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-med);
+}
+
+.achievement-card:hover::before {
+  transform: scaleX(1);
+}
+
+.achievement-card:hover {
+  background: var(--lyna-lavender);
+}
+
+.achievement-icon {
+  color: var(--lyna-purple);
+  opacity: 0.55;
+  margin-bottom: 1.5rem;
+  transition: opacity var(--transition-med);
+}
+
+.achievement-card:hover .achievement-icon {
+  opacity: 1;
+}
+
+.achievement-label {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--lyna-charcoal);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.achievement-desc {
+  font-size: var(--text-sm);
+  color: rgba(38,38,46,0.55);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+.lyna-timeline {
+  background: var(--lyna-offwhite);
+}
+
+.timeline-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  left: 140px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--lyna-purple), rgba(77,52,152,0.1));
+}
+
+.timeline-h-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 3rem;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(38,38,46,0.08);
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timeline-h-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-h-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-h-dot {
+  position: absolute;
+  left: 136px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--lyna-purple);
+  box-shadow: 0 0 0 3px rgba(77,52,152,0.15);
+}
+
+.timeline-h-date {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lyna-purple);
+  padding-top: 0.25rem;
+  line-height: 1.6;
+  align-self: start;
+}
+
+.timeline-h-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--lyna-charcoal);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-h-text {
+  font-size: var(--text-base);
+  color: rgba(38,38,46,0.6);
+  line-height: 1.75;
+  max-width: 560px;
+}
+
+/* ============================================================
+   VIDEO SHOWCASE
+   ============================================================ */
+.lyna-videos {
+  background: var(--lyna-charcoal);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.lyna-videos .lyna-section-title {
+  color: #fff;
+}
+
+.lyna-videos .section-label {
+  background: rgba(205,254,5,0.12);
+  color: var(--lyna-lime) !important;
+}
+
+.lyna-gallery-subtitle {
+  color: rgba(255,255,255,0.5);
+  font-size: var(--text-base);
+  font-weight: 400;
+  margin-top: 0.75rem;
+  max-width: 520px;
+}
+
+.lyna-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.lyna-video-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-med);
+  background: rgba(255,255,255,0.03);
+}
+
+.lyna-video-card:hover {
+  border-color: var(--lyna-lime);
+  box-shadow: 0 16px 48px rgba(205,254,5,0.1);
+}
+
+.lyna-video-thumb {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  background: #000;
+  overflow: hidden;
+}
+
+.lyna-video-thumb video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.lyna-video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.lyna-video-placeholder span {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lyna-lime);
+}
+
+.lyna-video-info {
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.lyna-video-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.lyna-video-desc {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.lyna-skills {
+  background: #fff;
+  border-top: 1px solid rgba(38,38,46,0.06);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 5rem;
+  margin-top: 3rem;
+}
+
+.skill-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(38,38,46,0.08);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.skill-name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--lyna-charcoal);
+}
+
+.skill-pct {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--lyna-purple);
+}
+
+.skill-bar {
+  height: 6px;
+  background: var(--lyna-lavender);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-sub {
+  font-size: var(--text-xs);
+  color: rgba(38,38,46,0.45);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+.lyna-quote {
+  background: var(--lyna-offwhite);
+}
+
+.lyna-quote-inner {
+  background: var(--lyna-lavender);
+  padding: 6rem 0;
+}
+
+.lyna-quote-block {
+  position: relative;
+  padding: 0 0 0 2.5rem;
+}
+
+.lyna-quote-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.lyna-coral-bar {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--lyna-purple);
+}
+
+.lyna-quote-text {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  font-style: normal;
+  color: var(--lyna-charcoal);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.lyna-quote-author {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-xs);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lyna-purple);
+}
+
+/* ============================================================
+   BACK TO HOME
+   ============================================================ */
+.lyna-back {
+  background: #fff;
+  padding: 0;
+  border-top: 1px solid rgba(38,38,46,0.06);
+}
+
+.lyna-back-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  gap: 0.75rem;
+  transition: background var(--transition-med);
+  color: var(--lyna-charcoal);
+}
+
+.lyna-back-link:hover {
+  background: var(--lyna-lavender);
+}
+
+.lyna-back-link .back-label {
+  font-family: 'Nunito', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--lyna-purple);
+}
+
+.lyna-back-link .back-title {
+  font-family: 'Lexend', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--lyna-charcoal);
+  transition: letter-spacing var(--transition-med);
+}
+
+.lyna-back-link:hover .back-title {
+  letter-spacing: 0.01em;
+}
+
+.lyna-back-link .back-sub {
+  font-size: var(--text-sm);
+  color: rgba(38,38,46,0.5);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.lyna-footer {
+  background: var(--lyna-charcoal);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem 0;
+}
+
+/* ============================================================
+   SCROLL PROGRESS
+   ============================================================ */
+.page-lyna .scroll-progress {
+  background: linear-gradient(90deg, var(--lyna-purple), var(--lyna-lime));
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1200px) {
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .scope-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .scope-visual {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .timeline-horizontal::before {
+    left: 100px;
+  }
+
+  .timeline-h-item {
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+  }
+
+  .timeline-h-dot {
+    left: 96px;
+  }
+
+  .lyna-video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lyna-hero-meta {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .lyna-meta-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(38,38,46,0.12);
+    align-self: auto;
+  }
+
+  .timeline-horizontal::before {
+    display: none;
+  }
+
+  .timeline-h-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 2rem 0;
+  }
+
+  .timeline-h-dot {
+    display: none;
+  }
+
+  .lyna-quote-block {
+    padding-left: 1.5rem;
+  }
+
+  .lyna-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
