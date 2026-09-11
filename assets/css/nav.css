@@ -292,3 +292,14 @@
 .nav--lyna .scroll-progress {
   background: linear-gradient(90deg, #4d3498, #cdfe05);
 }
+
+/* AntoxMedia — graphite, violet accent */
+.nav--antoxmedia {
+  background: rgba(20, 22, 26, 0.92);
+  color: var(--white);
+  backdrop-filter: blur(12px);
+}
+
+.nav--antoxmedia .scroll-progress {
+  background: linear-gradient(90deg, #6c5ce7, #f5a623);
+}

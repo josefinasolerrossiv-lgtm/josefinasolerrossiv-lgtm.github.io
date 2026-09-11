@@ -1,0 +1,672 @@
+/* ============================================================
+   ANTOXMEDIA.CSS — AntoxMedia (AI-Driven Marketing Agency)
+   Agency shell: Graphite (#14161a) · Violet (#6c5ce7) · Off-White (#f5f5f7)
+   Client panels keep their own brand identity:
+   Budare — Black (#0d0d0d) · Orange (#f5a623)
+   Mokambo — Chocolate Brown (#3a2318) · Cream (#f3e9dc)
+   ============================================================ */
+
+:root {
+  --antox-ink: #14161a;
+  --antox-violet: #6c5ce7;
+  --antox-violet-light: #a29bfe;
+  --antox-gray: #f5f5f7;
+
+  --budare-black: #0d0d0d;
+  --budare-orange: #f5a623;
+  --budare-orange-dark: #d98a12;
+
+  --mokambo-brown: #3a2318;
+  --mokambo-brown-light: #6b4a34;
+  --mokambo-cream: #f3e9dc;
+}
+
+/* ============================================================
+   PAGE BASE
+   ============================================================ */
+.page-antoxmedia {
+  background: var(--antox-gray);
+  color: var(--antox-ink);
+  font-family: 'Nunito', sans-serif;
+}
+
+.page-antoxmedia h1, .page-antoxmedia h2, .page-antoxmedia h3,
+.page-antoxmedia .antox-section-title, .page-antoxmedia .antox-hero-title {
+  font-family: 'Sora', 'Nunito', sans-serif;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.antox-hero {
+  position: relative;
+  min-height: 100svh;
+  background: radial-gradient(circle at 50% 20%, #232630 0%, var(--antox-ink) 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+.antox-hero-glow {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80vw, 760px);
+  height: min(80vw, 760px);
+  background: radial-gradient(circle, rgba(108,92,231,0.28) 0%, rgba(245,166,35,0.08) 45%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.antox-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 var(--space-md);
+}
+
+.antox-hero-eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--antox-violet-light);
+  margin-bottom: 2rem;
+}
+
+.antox-hero-title {
+  font-size: clamp(3.5rem, 12vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.antox-hero-title em {
+  font-style: normal;
+  color: var(--antox-violet-light);
+}
+
+.antox-hero-sub {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 4rem;
+}
+
+.antox-hero-meta {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.antox-meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.antox-meta-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--antox-violet-light);
+}
+
+.antox-meta-value {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.02em;
+}
+
+.antox-meta-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.15);
+  align-self: stretch;
+}
+
+.antox-hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.antox-section-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--antox-ink);
+}
+
+.antox-title-accent {
+  color: var(--antox-violet);
+}
+
+.page-antoxmedia .section-label {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: rgba(108,92,231,0.1);
+  color: var(--antox-violet) !important;
+}
+
+.page-antoxmedia .section-divider {
+  display: none;
+}
+
+/* ============================================================
+   SCOPE
+   ============================================================ */
+.antox-scope {
+  background: #fff;
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.scope-body {
+  color: rgba(20,22,26,0.7);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.scope-body:last-child {
+  margin-bottom: 0;
+}
+
+.scope-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.antox-logos-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.antox-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  background: var(--antox-gray);
+  border: 1px solid rgba(20,22,26,0.06);
+}
+
+.antox-logo-card img {
+  max-width: 160px;
+  height: auto;
+  display: block;
+}
+
+.antox-logo-card--budare {
+  background: var(--budare-black);
+}
+
+.antox-logo-card--mokambo {
+  background: var(--mokambo-cream);
+}
+
+/* ============================================================
+   BRAND SPLIT SECTION
+   ============================================================ */
+.antox-brands {
+  background: var(--antox-ink);
+}
+
+.antox-brands-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.antox-brands-header .antox-section-title {
+  color: #fff;
+}
+
+.antox-brands-header p {
+  color: rgba(255,255,255,0.5);
+  font-size: var(--text-base);
+  margin-top: 0.75rem;
+}
+
+.antox-split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  margin-top: 3.5rem;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.antox-panel {
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.antox-panel--budare {
+  background: linear-gradient(165deg, var(--budare-black) 0%, #1c1c1c 100%);
+  color: #fff;
+}
+
+.antox-panel--mokambo {
+  background: linear-gradient(165deg, var(--mokambo-cream) 0%, #ead9c2 100%);
+  color: var(--mokambo-brown);
+}
+
+.antox-panel-logo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 1.75rem;
+  align-self: flex-start;
+}
+
+.antox-panel-role {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.antox-panel--budare .antox-panel-role {
+  color: var(--budare-orange);
+}
+
+.antox-panel--mokambo .antox-panel-role {
+  color: var(--mokambo-brown-light);
+}
+
+.antox-panel-title {
+  font-family: 'Sora', 'Nunito', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.antox-panel-desc {
+  font-size: var(--text-base);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.antox-panel--budare .antox-panel-desc {
+  color: rgba(255,255,255,0.65);
+}
+
+.antox-panel--mokambo .antox-panel-desc {
+  color: rgba(58,35,24,0.7);
+}
+
+.antox-panel-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.antox-panel-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+.antox-panel-list svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.antox-panel--budare .antox-panel-list svg {
+  color: var(--budare-orange);
+}
+
+.antox-panel--mokambo .antox-panel-list svg {
+  color: var(--mokambo-brown-light);
+}
+
+.antox-panel-gallery {
+  display: grid;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.antox-panel--budare .antox-panel-gallery {
+  grid-template-columns: 1fr;
+  max-width: 220px;
+}
+
+.antox-panel--mokambo .antox-panel-gallery {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.antox-panel-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  transition: transform var(--transition-med);
+}
+
+.antox-panel-gallery img:hover {
+  transform: translateY(-4px);
+}
+
+/* ============================================================
+   SOCIAL LINKS
+   ============================================================ */
+.antox-social {
+  background: var(--budare-black);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.antox-social .antox-section-title {
+  color: #fff;
+}
+
+.antox-social .section-label {
+  background: rgba(245,166,35,0.12);
+  color: var(--budare-orange) !important;
+}
+
+.antox-social-subtitle {
+  color: rgba(255,255,255,0.5);
+  font-size: var(--text-base);
+  margin-top: 0.75rem;
+  max-width: 480px;
+}
+
+.antox-social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.antox-social-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--border-radius);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+  transition: all var(--transition-med);
+}
+
+.antox-social-card:hover {
+  background: rgba(245,166,35,0.1);
+  border-color: var(--budare-orange);
+  transform: translateY(-2px);
+}
+
+.antox-social-card svg {
+  flex-shrink: 0;
+  color: var(--budare-orange);
+}
+
+.antox-social-card span {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.antox-skills {
+  background: #fff;
+  border-top: 1px solid rgba(20,22,26,0.06);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 5rem;
+  margin-top: 3rem;
+}
+
+.skill-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(20,22,26,0.08);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.skill-name {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--antox-ink);
+}
+
+.skill-pct {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--antox-violet);
+}
+
+.skill-bar {
+  height: 6px;
+  background: rgba(108,92,231,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-sub {
+  font-size: var(--text-xs);
+  color: rgba(20,22,26,0.45);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   QUOTE
+   ============================================================ */
+.antox-quote {
+  background: var(--antox-gray);
+}
+
+.antox-quote-inner {
+  background: var(--antox-ink);
+  padding: 6rem 0;
+}
+
+.antox-quote-block {
+  position: relative;
+  padding: 0 0 0 2.5rem;
+}
+
+.antox-quote-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.antox-violet-bar {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--antox-violet);
+}
+
+.antox-quote-text {
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.antox-quote-author {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--antox-violet-light);
+}
+
+/* ============================================================
+   BACK TO HOME
+   ============================================================ */
+.antox-back {
+  background: #fff;
+  padding: 0;
+  border-top: 1px solid rgba(20,22,26,0.06);
+}
+
+.antox-back-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  gap: 0.75rem;
+  transition: background var(--transition-med);
+  color: var(--antox-ink);
+}
+
+.antox-back-link:hover {
+  background: var(--antox-gray);
+}
+
+.antox-back-link .back-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--antox-violet);
+}
+
+.antox-back-link .back-title {
+  font-family: 'Sora', 'Nunito', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--antox-ink);
+  transition: letter-spacing var(--transition-med);
+}
+
+.antox-back-link:hover .back-title {
+  letter-spacing: 0.01em;
+}
+
+.antox-back-link .back-sub {
+  font-size: var(--text-sm);
+  color: rgba(20,22,26,0.5);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.antox-footer {
+  background: var(--antox-ink);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem 0;
+}
+
+/* ============================================================
+   SCROLL PROGRESS
+   ============================================================ */
+.page-antoxmedia .scroll-progress {
+  background: linear-gradient(90deg, var(--antox-violet), var(--budare-orange));
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .scope-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .scope-visual {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .antox-split {
+    grid-template-columns: 1fr;
+  }
+
+  .antox-panel--budare .antox-panel-gallery {
+    max-width: 260px;
+  }
+
+  .antox-social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .antox-hero-meta {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .antox-meta-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    align-self: auto;
+  }
+
+  .antox-quote-block {
+    padding-left: 1.5rem;
+  }
+
+  .antox-panel {
+    padding: 2.75rem 1.75rem;
+  }
+}
