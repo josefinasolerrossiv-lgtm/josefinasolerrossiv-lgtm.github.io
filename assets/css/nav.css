@@ -225,17 +225,17 @@
 /* Home — light transparent */
 .nav--home {
   background: transparent;
-  color: var(--white);
+  color: #2e2320;
 }
 
 .nav--home.is-scrolled {
-  background: rgba(8, 8, 12, 0.92);
+  background: rgba(255, 248, 243, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .nav--home .scroll-progress {
-  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  background: linear-gradient(90deg, #ff8c7a, #b79fd4);
 }
 
 /* University — blue */
